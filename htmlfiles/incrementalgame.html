@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>incrementalgame</title>
+    </head>
+    <body>
+        <script>
+        let numbers = 0;
+        let multiplier = 1;
+        let firstupgradeprice = 20;
+        function earnNumber(){
+            numbers = numbers + 1 * multiplier;
+            document.getElementById("numbers").innerHTML = numbers;
+            document.getElementById("multiplier").innerHTML = multiplier;
+        }
+        function buyFirstUpgrade(){
+            if (numbers >= firstupgradeprice){
+                numbers = numbers - firstupgradeprice;
+                firstupgradeprice = Math.round(firstupgradeprice * 2.3);
+                multiplier = multiplier * 2;
+            }
+            document.getElementById("numbers").innerHTML = numbers;
+            document.getElementById("multiplier").innerHTML = multiplier;
+            document.getElementById("firstUpgradePrice").innerHTML = firstupgradeprice;
+        }
+        function updateFirstUpgradePrice(){
+            document.getElementById("firstUpgradePrice").innerHTML = firstupgradeprice;
+        }
+        function displayVariables(){
+            console.log(numbers);
+            console.log(multiplier);
+            console.log(firstupgradeprice)
+        }
+    </script>
+
+        <button onclick="earnNumber(); displayVariables()"
+            style="font-size:25px; background-color:blue; border-radius:15px">Earn
+            numbers</button>
+        <br>
+        <span style="font-size:25px">Number Multiplier: </span><span span
+            id="multiplier" style="font-size:25px"></span><span
+            style="font-size:25px">x</span>
+        <br>
+
+        <span id="numbers" style="font-size:25px">0</span><span
+            style="font-size:25px"> numbers</span>
+
+        <br>
+        <br>
+
+        <button
+            onclick="buyFirstUpgrade(); updateFirstUpgradePrice(); displayVariables()"
+            style="font-size:25px; background-color:lightblue; border-radius:15px">Earn
+            2x more numbers</button>
+
+        <br>
+        <span style="font-size:25px">Cost: </span><span id="firstUpgradePrice"
+            style="font-size:25px"></span><span style="font-size:25px">
+            numbers</span>
+        <script>
+        updateFirstUpgradePrice();
+        console.log(numbers);
+        console.log(multiplier);
+        console.log(firstupgradeprice);
+    </script>
+
+        <br>
+        <a href="../index.html">Not a website</a>
+    </body>
+</html>

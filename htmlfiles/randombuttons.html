@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>randombuttons</title>
+</head>
+<body>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <button style="font-size:25px; background-color:blue; color:lightblue; border-radius:30px">click me</button>
+    </a>
+    <br>
+    <button onclick="gainPoint()" style="font-size:25px; background-color:blue; color:lightblue; border-radius:20px">click me instead</button> <span id="points">0</span> <span id="megapoints">0</span> <span id="gigapoints">0</span>
+    <br>
+
+    <script>
+        points = 0;
+        megapoints = 0;
+        gigapoints = 0;
+        function gainPoint(){
+            points += 1 * (megapoints + 1) * (gigapoints + 1);
+            document.getElementById("points").innerHTML = points;
+
+            if (points >= 200){
+            points = 0;
+            megapoints += 1 * gigapoints + 1;
+            document.getElementById("megapoints").innerHTML = megapoints;
+            }
+            if (megapoints >= 200){
+                points = 0;
+                megapoints = 0;
+                gigapoints += 1;
+                document.getElementById("gigapoints").innerHTML = gigapoints;
+            }
+        }
+        
+    </script>
+
+    <a href="../index.html">Not a website</a>
+</body>
+</html>

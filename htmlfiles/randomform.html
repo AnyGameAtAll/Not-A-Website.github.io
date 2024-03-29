@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h1>This is NOT a real form, please dont put personal information in here.</h1>
+    <form action="index.html" method="POST" enctype="multipart/form-data">
+        <label for="username">username:</label>
+        <input type="text" id="username" placeholder="username" required>
+        
+        <br>
+        <label for="password">password:</label>
+        <input type="password" required placeholder="password">
+
+        <br>
+        <label for="email">email:</label>
+        <input type="email" id="email" placeholder="example@placeholder.com">
+
+        <br>
+        <label for="phone">phone:</label>
+        <input type="phone" id="phone" placeholder="1234 567890" pattern="[0-9]{4}-[0-9]-{5}">
+
+        <br>
+        <label for="bday">randomtime:</label>
+        <input type="date" id="bday">
+        <br>
+        <label for="productive">Do you think you are productive?:</label>
+        <label for="no1">no</label>
+        <input type="radio" id="no1" value="no1" name="productivity">
+        <label for="no2">no</label>
+        <input type="radio" id="no2" value="no2" name="productivity">
+        <label for="no3">no</label>
+        <input type="radio" id="no3" value="no3" name="productivity">
+        <label for="no4">no</label>
+        <input type="radio" id="no4" value="no4" name="productivity">
+        <br>
+        <label for="questionresponse">Do you like my non-website?</label>
+        <select id="question">
+            <option>Yes</option>
+            <option>No</option>
+            <option>Maybe</option>
+            <option>I dont want to dissapoint you</option>
+        </select>
+        <br>
+        <label for="subscribe">Subscribe to my youtube channel:</label>
+        <input type="checkbox" id="subscribe">
+        <br>
+        <label for="comment">Describe how you feel about my non-website:</label>
+        <textarea id="comment" rows="3" cols="25"></textarea>
+        <br>
+        <label for="file">Place a random file here:</label>
+        <input type="file" id="file">
+        <br>
+        <input type="submit">
+        <br>
+        <input type="reset">
+    </form>
+
+    <a href="../index.html">Not a website</a>
+</body>
+</html>
